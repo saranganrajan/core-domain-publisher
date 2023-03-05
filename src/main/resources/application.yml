@@ -1,0 +1,26 @@
+server:
+  port: 8083
+spring:
+  cloud:
+    azure:
+      servicebus:
+        connection-string: Endpoint=sb://saranganrajan-servicebus.servicebus.windows.net;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=wtnbhcUL8ct2s9M4XvL4Pe3SkCnpvnA1Z+ASbIRv8RA=
+    stream:
+      bindings:
+        consume-in-0:
+          destination: core/policy
+        supply-out-0:
+          destination: core/policy
+      function:
+        definition: consume;supply;
+      poller:
+        fixed-delay: 1000
+        initial-delay: 0
+      servicebus:
+        bindings:
+          consume-in-0:
+            consumer:
+              auto-complete: false
+          supply-out-0:
+            producer:
+              entity-type: queue
