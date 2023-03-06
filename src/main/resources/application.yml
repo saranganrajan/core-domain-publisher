@@ -4,23 +4,24 @@ spring:
   cloud:
     azure:
       servicebus:
+        enabled: true
         connection-string: Endpoint=sb://saranganrajan-servicebus.servicebus.windows.net;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=wtnbhcUL8ct2s9M4XvL4Pe3SkCnpvnA1Z+ASbIRv8RA=
     stream:
       bindings:
-        consume-in-0:
+        policy-message-output:
           destination: core/policy
-        supply-out-0:
-          destination: core/policy
+        customer-message-output:
+          destination: core/customer
       function:
-        definition: consume;supply;
+        definition: supply;
       poller:
         fixed-delay: 1000
         initial-delay: 0
       servicebus:
         bindings:
-          consume-in-0:
-            consumer:
-              auto-complete: false
-          supply-out-0:
+          policy-message-output:
+            producer:
+              entity-type: queue
+          customer-message-output:
             producer:
               entity-type: queue
