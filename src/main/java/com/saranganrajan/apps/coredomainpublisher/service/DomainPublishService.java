@@ -9,5 +9,5 @@ import java.util.List;
 @Service
 public interface DomainPublishService {
     void publishPolicyDomain(PolicyDomain policyDomain);
-    void publishCustomerDomain(List<CustomerDomain> customerDomain);
+    void publishCustomerDomain(CustomerDomain customerDomain);
 }

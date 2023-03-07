@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.json.JsonMapper;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Builder
 @Setter
@@ -17,7 +18,7 @@ public class CustomerDomain {
     private String dateOfBirth;
     private String email;
     private String phoneNumber;
-    private LinkedPolicy linkedPolicy;
+    private List<LinkedPolicy> linkedPolicies;
 
 
 }

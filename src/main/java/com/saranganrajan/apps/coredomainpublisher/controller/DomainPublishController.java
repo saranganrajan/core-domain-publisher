@@ -30,8 +30,8 @@ public class DomainPublishController {
     }
 
     @PostMapping(path = "/domain/customer/publish", consumes = "application/json")
-    public ResponseEntity publishCustomerDomain(@RequestBody List<CustomerDomain> customerDomains) {
-        domainPublishService.publishCustomerDomain(customerDomains);
+    public ResponseEntity publishCustomerDomain(@RequestBody CustomerDomain customerDomain) {
+        domainPublishService.publishCustomerDomain(customerDomain);
         return ResponseEntity.ok().build();
     }
 

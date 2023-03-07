@@ -30,7 +30,7 @@ public class DomainPublishServiceImpl implements DomainPublishService {
     }
 
     @Override
-    public void publishCustomerDomain(List<CustomerDomain> customerDomain) {
+    public void publishCustomerDomain(CustomerDomain customerDomain) {
         customerDomainPublisher.publish(customerDomain, "Customer Upload");
     }
 }
