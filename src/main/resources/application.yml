@@ -12,6 +12,10 @@ spring:
           destination: core/policy
         customer-message-output:
           destination: core/customer
+        policy-message-input:
+          destination: core/policy
+        customer-message-input:
+          destination: core/customer
       function:
         definition: supply;
       poller:
@@ -25,3 +29,25 @@ spring:
           customer-message-output:
             producer:
               entity-type: queue
+          policy-message-input:
+            consumer:
+              auto-complete: true
+          customer-message-input:
+            consumer:
+              auto-complete: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      max-lifetime: 50000
+      wait-timeout: 50000
+    password: SingaiSaga84
+    url: jdbc:mysql://148.72.232.181:3306/tamilmuthiraidb
+    username: sarangapani
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+    show-sql: false

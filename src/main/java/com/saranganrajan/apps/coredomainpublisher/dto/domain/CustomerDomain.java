@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CustomerDomain {
+    private String customerTransactionId;
     private String customerNumber;
     private String customerName;
     private String dateOfBirth;

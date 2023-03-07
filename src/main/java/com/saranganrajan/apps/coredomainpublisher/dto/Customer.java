@@ -15,6 +15,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
+    private String customerTransactionId;
     private String customerNumber;
     private String customerName;
     private String dateOfBirth;

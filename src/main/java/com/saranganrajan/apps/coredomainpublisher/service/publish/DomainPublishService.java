@@ -1,4 +1,4 @@
-package com.saranganrajan.apps.coredomainpublisher.service;
+package com.saranganrajan.apps.coredomainpublisher.service.publish;
 
 import com.saranganrajan.apps.coredomainpublisher.dto.domain.CustomerDomain;
 import com.saranganrajan.apps.coredomainpublisher.dto.domain.PolicyDomain;

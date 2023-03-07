@@ -2,15 +2,13 @@ package com.saranganrajan.apps.coredomainpublisher.controller;
 
 import com.saranganrajan.apps.coredomainpublisher.dto.domain.CustomerDomain;
 import com.saranganrajan.apps.coredomainpublisher.dto.domain.PolicyDomain;
-import com.saranganrajan.apps.coredomainpublisher.service.DomainPublishService;
+import com.saranganrajan.apps.coredomainpublisher.service.publish.DomainPublishService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @Slf4j

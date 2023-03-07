@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PolicyDomain {
+    private String policyTransactionId;
     private String policyNumber;
     private String plan;
     private String policyEffectiveDate;

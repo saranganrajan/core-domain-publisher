@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.messaging.Message;
@@ -20,6 +21,7 @@ import java.util.function.Supplier;
 
 @SpringBootApplication
 @Slf4j
+@EnableFeignClients
 @ComponentScan(basePackages = {"com.saranganrajan.apps.coredomainpublisher"})
 public class CoreDomainPublisherApplication {
 

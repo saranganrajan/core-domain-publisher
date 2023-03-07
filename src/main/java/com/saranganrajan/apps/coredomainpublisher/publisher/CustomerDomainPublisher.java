@@ -26,5 +26,6 @@ public class CustomerDomainPublisher implements MessagePublishAdapter {
                 .withPayload(message)
                 .setHeader("customer", label)
                 .build());
+
     }
 }
