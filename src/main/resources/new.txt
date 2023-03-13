@@ -1,0 +1,11 @@
+> az login
+> az account set -s <subscription-key>
+> az group create --name=saranganrajan-kubernetes --location=eastus
+> az acr create --resource-group saranganrajan-kubernetes --location eastus  --name saranganrajankubernetesregistry --sku Basic
+> az config set defaults.acr=saranganrajankubernetesregistry
+> az acr login -n saranganrajankubernetesregistry --expose-token && mvn compile jib:build
+> az aks install-cli
+> az aks get-credentials --resource-group=saranganrajan-kubernetes --name=saranganrajan-akscluster
+> kubectl get-credentials --resource-group=saranganrajan-kubernetes --name=saranganrajan-akscluster
+> kubectl run core-domain-processor --image=saranganrajankubernetesregistry .azurecr.io/<pod-name>:latest
+> kubectl expose pod <pod-name> --type=LoadBalancer --port=<port> --target-port=<port>

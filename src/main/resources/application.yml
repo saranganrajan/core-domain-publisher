@@ -5,7 +5,7 @@ spring:
     azure:
       servicebus:
         enabled: true
-        connection-string: Endpoint=sb://saranganrajan-servicebus.servicebus.windows.net;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=wtnbhcUL8ct2s9M4XvL4Pe3SkCnpvnA1Z+ASbIRv8RA=
+        connection-string:
     stream:
       bindings:
         policy-message-output:
@@ -40,9 +40,6 @@ spring:
     hikari:
       max-lifetime: 50000
       wait-timeout: 50000
-    password: SingaiSaga84
-    url: jdbc:mysql://148.72.232.181:3306/tamilmuthiraidb
-    username: sarangapani
   jpa:
     hibernate:
       ddl-auto: update
